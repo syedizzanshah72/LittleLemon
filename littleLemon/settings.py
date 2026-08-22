@@ -37,10 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework_simplejwt',
+    'drf_spectacular',
     'Menu.apps.MenuConfig',
     'Booking.apps.BookingConfig',
-    'rest_framework',
-    'rest_framework_simplejwt'
+
 ]
 
 MIDDLEWARE = [
@@ -127,4 +129,16 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES':(
         'rest_framework.permissions.IsAuthenticated',
     )
+
+}
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'little Lemon Project API',
+    'DESCRIPTION': 'Detailed description of my project littleLemon API project endpoints.',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,  # Hides the schema endpoint from the layout
 }

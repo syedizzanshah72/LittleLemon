@@ -25,9 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-msbux0a_4nrp4t)5-+je$#!fpwswthc%1lhsz5k6jib=c&#oq1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [   'littlelemon-production.up.railway.app']
+ALLOWED_HOSTS = [
+    'littlelemon-production.up.railway.app',
+     '*'
+]
 
 
 # Application definition

@@ -1,1 +1,1 @@
-web: gunicorn littlelemon.wsgi:application --bind 0.0.0.0:800
+web: gunicorn littlelemon.wsgi:application --bind 0.0.0.0:8000
